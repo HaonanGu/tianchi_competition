@@ -1,0 +1,14 @@
+目前请使用extract_center_sentences_api.py 中的类Center_sentence来抽取关键句子
+其中包含两种方法，use_model_savetextfiles(inputpath,outputpath) 和 use_model_text(text)
+
+例子：
+import sys
+sys.path.append('/home/118_16/code/center_sentence/')
+from extract_center_sentences_api import Center_sentence
+
+cs=Center_sentence()
+cs.use_model_savetextfiles('/home/118_16/code/center_sentence/test_txt/','/home/118_16/code/center_sentence/test_txt_save')
+或
+text = u'北京科锐配电自动化股份有限公司关于项目中标的提示性公告。\n' \
+       u'本公司及董事会全体成员保证公告内容真实、准确和完整，并对公告中的虚假记载、误导性陈述或者重大遗漏承担责任。'
+center_text=cs.use_model_text(text)
